@@ -261,8 +261,11 @@ async def download_flag_async(url: str, filename="parsed-flag.png"):
             return filename
 
         # Скачиваем если не в кэше
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
         async with aiohttp.ClientSession() as session:
-            async with session.get(url) as resp:
+            async with session.get(url, headers=headers) as resp:
                 if resp.status == 200:
                     data = await resp.read()
 
@@ -294,8 +297,11 @@ async def download_hero_image_async(url: str):
             return cached_data
 
         # Скачиваем если не в кэше
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
         async with aiohttp.ClientSession() as session:
-            async with session.get(url) as resp:
+            async with session.get(url, headers=headers) as resp:
                 if resp.status == 200:
                     data = await resp.read()
 
