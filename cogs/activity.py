@@ -242,6 +242,7 @@ class Activity(commands.Cog):
                     description.append(
                         f"\n{medal} **#{i}** · {entry['name']}\n"
                         f"⌛ {entry['minutes']} мин. ({entry['gold']} <:gold:1396897616729735299>)"
+                        f"⌛ {entry['minutes']} мин. ({entry['gold']} <:gold:1396929958965940286>)"
                     )
 
                 # Учитываем часовой пояс Москвы
@@ -524,14 +525,22 @@ class Activity(commands.Cog):
         embed = discord.Embed(title=f"Статистика {user.display_name} ⏣", color=discord.Color.green())
         embed.add_field(
             name="📊 Сегодня",
-            value=f"🕐 Время в войсе: {daily_voice_minutes} мин + {daily_stats['voice_gold']} <:gold:1396897616729735299>\n"
-                  f"💬 Сообщений: {daily_stats['messages']} + {daily_stats['message_gold']} <:gold:1396897616729735299>",
+            value=(
+                f"🕐 Время в войсе: {daily_voice_minutes} мин + {daily_stats['voice_gold']} <:gold:1396897616729735299>\n"
+                f"🕐 Время в войсе: {daily_voice_minutes} мин + {daily_stats['voice_gold']} <:gold:1396929958965940286>\n"
+                f"💬 Сообщений: {daily_stats['messages']} + {daily_stats['message_gold']} <:gold:1396897616729735299>\n"
+                f"💬 Сообщений: {daily_stats['messages']} + {daily_stats['message_gold']} <:gold:1396929958965940286>"
+            ),
             inline=False
         )
         embed.add_field(
             name="🏆 За все время",
-            value=f"🕐 Время в войсе: {data[3]} мин + {data[4]} <:gold:1396897616729735299>\n"
-                  f"💬 Сообщений: {data[5]} + {data[6]} <:gold:1396897616729735299>",
+            value=(
+                f"🕐 Время в войсе: {data[3]} мин + {data[4]} <:gold:1396897616729735299>\n"
+                f"🕐 Время в войсе: {data[3]} мин + {data[4]} <:gold:1396929958965940286>\n"
+                f"💬 Сообщений: {data[5]} + {data[6]} <:gold:1396897616729735299>\n"
+                f"💬 Сообщений: {data[5]} + {data[6]} <:gold:1396929958965940286>"
+            ),
             inline=False
         )
         print(f"DEBUG: Отправляем ответ для {user.name}")
