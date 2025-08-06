@@ -30,14 +30,12 @@ class Shop(commands.Cog):
         @discord.ui.button(label="Моя статистика", style=discord.ButtonStyle.secondary, custom_id="stats")
         async def show_stats(self, interaction: discord.Interaction, button: discord.ui.Button):
             try:
-                # Для обычной команды используем get_command
-                command = self.client.get_command("статистика")
-                if command:
-                    await interaction.response.defer()
-                    ctx = await self.client.get_context(interaction.message)
-                    await command(ctx, interaction.user)
+                activity_cog = self.client.get_cog("Activity")
+                if activity_cog and hasattr(activity_cog, "статистика_slash"):
+                    # Вызываем метод напрямую, member=None (текущий пользователь)
+                    await activity_cog.статистика_slash(interaction)
                 else:
-                    await interaction.response.send_message("Команда временно недоступна", ephemeral=True)
+                    await interaction.response.send_message("Команда статистики временно недоступна", ephemeral=True)
             except Exception as e:
                 await interaction.response.send_message(f"Произошла ошибка: {str(e)}", ephemeral=True)
 
@@ -59,7 +57,7 @@ class Shop(commands.Cog):
             item_info = item["info"]
             em.add_field(
                 name="\u200b", # пустое имя, чтобы всё было в value
-                value=f"**{name}** — {cost} <:gold:1396897616729735299>\n{item_info} (ID: `{item_id}`)",
+                value=f"**{name}** — {cost} <:gold:1396929958965940286>\n{item_info} (ID: `{item_id}`)",
                 inline=False
             )
         if len(self.inv.shop_items) > max_fields:
@@ -81,9 +79,9 @@ class Shop(commands.Cog):
                     title=f"{name.upper()}"
                 )
                 sell_amt = int(cost / 4)
-                em.add_field(name="Цена покупки", value=f"{cost} <:gold:1396897616729735299>", inline=False)
+                em.add_field(name="Цена покупки", value=f"{cost} <:gold:1396929958965940286>", inline=False)
                 em.add_field(name="Цена продажи",
-                             value=f"{sell_amt} <:gold:1396897616729735299>", inline=False)
+                             value=f"{sell_amt} <:gold:1396929958965940286>", inline=False)
                 await interaction.response.send_message(embed=em)
                 return
         await interaction.response.send_message(f"Нет предмета с названием '{item_name}'", ephemeral=True)
