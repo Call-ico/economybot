@@ -1,0 +1,249 @@
+2025-08-06 04:59:56,987 DEBUG discord.client on_ready has successfully been registered as an event
+2025-08-06 04:59:56,988 DEBUG discord.client on_message has successfully been registered as an event
+2025-08-06 04:59:56,989 DEBUG discord.client on_interaction has successfully been registered as an event
+2025-08-06 04:59:56,989 DEBUG discord.client on_command_error has successfully been registered as an event
+2025-08-06 04:59:56,990 DEBUG asyncio Using proactor: IocpProactor
+2025-08-06 04:59:57,118 DEBUG root [2025-08-06 04:59:56] [INFO    ] discord.client: logging in using static token
+2025-08-06 04:59:56,993 INFO discord.client logging in using static token
+2025-08-06 04:59:58,603 DEBUG aiosqlite executing <function connect.<locals>.connector at 0x0000027EB1298680>
+2025-08-06 04:59:58,610 DEBUG aiosqlite operation <function connect.<locals>.connector at 0x0000027EB1298680> completed
+2025-08-06 04:59:58,846 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,846 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,847 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122DB40>, 'CREATE TABLE IF NOT EXISTS `bank`(userID BIGINT)', ())
+2025-08-06 04:59:58,849 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122DB40>, 'CREATE TABLE IF NOT EXISTS `bank`(userID BIGINT)', ()) completed
+2025-08-06 04:59:58,850 DEBUG aiosqlite executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,851 DEBUG aiosqlite operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,852 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EB122DB40>)
+2025-08-06 04:59:58,852 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EB122DB40>) completed
+2025-08-06 04:59:58,853 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,854 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,855 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122DB40>, 'ALTER TABLE `bank` ADD COLUMN `wallet` BIGINT DEFAULT 0', ())
+2025-08-06 04:59:58,855 DEBUG aiosqlite returning exception duplicate column name: wallet
+2025-08-06 04:59:58,856 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,857 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,858 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E1C0>, 'ALTER TABLE `bank` ADD COLUMN `bank` BIGINT DEFAULT 0', ())
+2025-08-06 04:59:58,858 DEBUG aiosqlite returning exception duplicate column name: bank
+2025-08-06 04:59:58,859 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,860 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,861 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E240>, 'ALTER TABLE `bank` ADD COLUMN `total_voice_minutes` BIGINT DEFAULT 0', ())
+2025-08-06 04:59:58,861 DEBUG aiosqlite returning exception duplicate column name: total_voice_minutes
+2025-08-06 04:59:58,862 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,863 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,864 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E040>, 'ALTER TABLE `bank` ADD COLUMN `total_voice_gold` BIGINT DEFAULT 0', ())
+2025-08-06 04:59:58,864 DEBUG aiosqlite returning exception duplicate column name: total_voice_gold
+2025-08-06 04:59:58,865 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,866 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,867 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E3C0>, 'ALTER TABLE `bank` ADD COLUMN `total_messages` BIGINT DEFAULT 0', ())
+2025-08-06 04:59:58,867 DEBUG aiosqlite returning exception duplicate column name: total_messages
+2025-08-06 04:59:58,868 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,868 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,869 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E4C0>, 'ALTER TABLE `bank` ADD COLUMN `total_message_gold` BIGINT DEFAULT 0', ())
+2025-08-06 04:59:58,870 DEBUG aiosqlite returning exception duplicate column name: total_message_gold
+2025-08-06 04:59:58,871 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EB1314040>)
+2025-08-06 04:59:58,871 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EB1314040>) completed
+2025-08-06 04:59:58,873 DEBUG aiosqlite executing <function connect.<locals>.connector at 0x0000027EB1298B80>
+2025-08-06 04:59:58,874 DEBUG aiosqlite operation <function connect.<locals>.connector at 0x0000027EB1298B80> completed
+2025-08-06 04:59:58,875 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,876 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,876 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E5C0>, 'CREATE TABLE IF NOT EXISTS `inventory`(userID BIGINT)', ())
+2025-08-06 04:59:58,878 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E5C0>, 'CREATE TABLE IF NOT EXISTS `inventory`(userID BIGINT)', ()) completed
+2025-08-06 04:59:58,879 DEBUG aiosqlite executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,879 DEBUG aiosqlite operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,880 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EB122E5C0>)
+2025-08-06 04:59:58,881 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EB122E5C0>) completed
+2025-08-06 04:59:58,882 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,882 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,883 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E5C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:cs:1397687842779435068> бесплатный кс` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,884 DEBUG aiosqlite returning exception duplicate column name: <:cs:1397687842779435068> бесплатный кс
+2025-08-06 04:59:58,885 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,885 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,886 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E6C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:color:1397688917083291709> смена цвета роли` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,886 DEBUG aiosqlite returning exception duplicate column name: <:color:1397688917083291709> смена цвета роли
+2025-08-06 04:59:58,887 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,888 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,889 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E840>, 'ALTER TABLE `inventory` ADD COLUMN `<:BTNSilence:1398024524330434773> анмут` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,889 DEBUG aiosqlite returning exception duplicate column name: <:BTNSilence:1398024524330434773> анмут
+2025-08-06 04:59:58,890 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,891 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,891 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122E940>, 'ALTER TABLE `inventory` ADD COLUMN `<:unban:1397687712051368067> разбан с клозов` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,892 DEBUG aiosqlite returning exception duplicate column name: <:unban:1397687712051368067> разбан с клозов
+2025-08-06 04:59:58,893 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,893 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,894 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122EAC0>, 'ALTER TABLE `inventory` ADD COLUMN `<:role:1397687938099318906> особые права роли` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,895 DEBUG aiosqlite returning exception duplicate column name: <:role:1397687938099318906> особые права роли
+2025-08-06 04:59:58,896 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,896 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,897 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122EC40>, 'ALTER TABLE `inventory` ADD COLUMN `<:private:1397687676370681956> приватная комната` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,898 DEBUG aiosqlite returning exception duplicate column name: <:private:1397687676370681956> приватная комната
+2025-08-06 04:59:58,899 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,899 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,900 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122EDC0>, 'ALTER TABLE `inventory` ADD COLUMN `<:zvuk:1397688038712283197> улучшенное качество звука` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,901 DEBUG aiosqlite returning exception duplicate column name: <:zvuk:1397688038712283197> улучшенное качество звука
+2025-08-06 04:59:58,902 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,902 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,903 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122EEC0>, 'ALTER TABLE `inventory` ADD COLUMN `<:update:1396934490944962581> улучшенная роль` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,904 DEBUG aiosqlite returning exception duplicate column name: <:update:1396934490944962581> улучшенная роль
+2025-08-06 04:59:58,904 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,905 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,906 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F0C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:BTNAdvancedUnholyArmor:1402048051404869702> Ладдер армор 14 дней` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,906 DEBUG aiosqlite returning exception duplicate column name: <:BTNAdvancedUnholyArmor:1402048051404869702> Ладдер армор 14 дней
+2025-08-06 04:59:58,907 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,908 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,909 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F1C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:bonus:1402048692495585300> Ладдер бонус 14 дней` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,909 DEBUG aiosqlite returning exception duplicate column name: <:bonus:1402048692495585300> Ладдер бонус 14 дней
+2025-08-06 04:59:58,910 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,910 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,911 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F340>, 'ALTER TABLE `inventory` ADD COLUMN `<:proakk7:1397688074343026708> про акк 7 дней` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,912 DEBUG aiosqlite returning exception duplicate column name: <:proakk7:1397688074343026708> про акк 7 дней
+2025-08-06 04:59:58,913 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,913 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,914 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F440>, 'ALTER TABLE `inventory` ADD COLUMN `<:proakk14:1397688101073195090> про акк 14 дней` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,915 DEBUG aiosqlite returning exception duplicate column name: <:proakk14:1397688101073195090> про акк 14 дней
+2025-08-06 04:59:58,916 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,916 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,917 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F5C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:proakk30:1397688130051637329> про акк 30 дней` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,918 DEBUG aiosqlite returning exception duplicate column name: <:proakk30:1397688130051637329> про акк 30 дней
+2025-08-06 04:59:58,919 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,919 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,920 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F740>, 'ALTER TABLE `inventory` ADD COLUMN `<:pack30:1397687531935371435> супер пак 30 дней` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,921 DEBUG aiosqlite returning exception duplicate column name: <:pack30:1397687531935371435> супер пак 30 дней
+2025-08-06 04:59:58,922 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,922 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,923 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122F8C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:sff:1396933372466692196> Shadow Fiend` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,924 DEBUG aiosqlite returning exception duplicate column name: <:sff:1396933372466692196> Shadow Fiend
+2025-08-06 04:59:58,925 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,925 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,926 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122FA40>, 'ALTER TABLE `inventory` ADD COLUMN `<:necr:1396933406578708591> Necromancer` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,927 DEBUG aiosqlite returning exception duplicate column name: <:necr:1396933406578708591> Necromancer
+2025-08-06 04:59:58,928 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,928 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,929 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122FB40>, 'ALTER TABLE `inventory` ADD COLUMN `<:majority:1396935174813520135> Majority` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,930 DEBUG aiosqlite returning exception duplicate column name: <:majority:1396935174813520135> Majority
+2025-08-06 04:59:58,931 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,931 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,932 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122FC40>, 'ALTER TABLE `inventory` ADD COLUMN `<:royal:1398027190532309134> Royal Crown` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,932 DEBUG aiosqlite returning exception duplicate column name: <:royal:1398027190532309134> Royal Crown
+2025-08-06 04:59:58,933 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,934 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,935 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122FD40>, 'ALTER TABLE `inventory` ADD COLUMN `<:customerole:1397688173001310260> Своя роль` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,935 DEBUG aiosqlite returning exception duplicate column name: <:customerole:1397688173001310260> Своя роль
+2025-08-06 04:59:58,936 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,937 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,937 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122FE40>, 'ALTER TABLE `inventory` ADD COLUMN `<:aegis:1397687748869095495> 1 аегис` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,938 DEBUG aiosqlite returning exception duplicate column name: <:aegis:1397687748869095495> 1 аегис
+2025-08-06 04:59:58,939 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,940 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,941 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB122FF40>, 'ALTER TABLE `inventory` ADD COLUMN `<:68:1396933324789776484> колесо фортуны` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,941 DEBUG aiosqlite returning exception duplicate column name: <:68:1396933324789776484> колесо фортуны
+2025-08-06 04:59:58,942 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,943 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,944 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB12E80C0>, 'ALTER TABLE `inventory` ADD COLUMN `<:tittle:1397687623845417030> титул на сайте (сезон)` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,944 DEBUG aiosqlite returning exception duplicate column name: <:tittle:1397687623845417030> титул на сайте (сезон)
+2025-08-06 04:59:58,945 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,946 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,947 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB12E8240>, 'ALTER TABLE `inventory` ADD COLUMN `<:tittle:1397687623845417030> титул на сайте (навсегда)` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,947 DEBUG aiosqlite returning exception duplicate column name: <:tittle:1397687623845417030> титул на сайте (навсегда)
+2025-08-06 04:59:58,948 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,949 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,949 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EB12E8340>, 'ALTER TABLE `inventory` ADD COLUMN `🇪🇺 EU флаг` INTEGER DEFAULT 0', ())
+2025-08-06 04:59:58,970 DEBUG aiosqlite returning exception duplicate column name: 🇪🇺 EU флаг
+2025-08-06 04:59:58,971 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EB1314F40>)
+2025-08-06 04:59:58,971 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EB1314F40>) completed
+2025-08-06 04:59:58,972 DEBUG root Таблицы успешно созданы/изменены
+2025-08-06 04:59:58,987 DEBUG root Запущен voice_reward_loop
+2025-08-06 04:59:58,987 DEBUG root Запущен voice_leaderboard_updater
+2025-08-06 04:59:58,989 DEBUG root Загружена статистика: 25 записей
+2025-08-06 04:59:59,339 DEBUG root Загружено расширение: activity
+2025-08-06 04:59:59,353 DEBUG root Загружено расширение: admin
+2025-08-06 04:59:59,363 DEBUG root Загружено расширение: daily_bonus
+2025-08-06 04:59:59,798 DEBUG root Загружено расширение: economy
+2025-08-06 04:59:59,802 DEBUG root Загружено расширение: events
+2025-08-06 04:59:59,810 DEBUG root Загружено расширение: fun
+2025-08-06 04:59:59,819 DEBUG root Загружено расширение: inventory
+2025-08-06 04:59:59,827 DEBUG root Загружено расширение: mainbank
+2025-08-06 04:59:59,831 DEBUG root Загружено расширение: shop
+2025-08-06 04:59:59,834 DEBUG root Загружено расширение: stats
+2025-08-06 04:59:59,835 DEBUG root Синхронизация команд...
+2025-08-06 05:00:02,027 DEBUG root Синхронизировано 21 команд
+2025-08-06 05:00:03,146 DEBUG root [2025-08-06 05:00:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 2e03c0b9cfdb4ac6297ad65f5f1b32f6).
+2025-08-06 05:00:03,146 INFO discord.gateway Shard ID None has connected to Gateway (Session ID: 2e03c0b9cfdb4ac6297ad65f5f1b32f6).
+2025-08-06 05:00:06,235 DEBUG root Попытка обновить/создать сообщение топа в канале тест-конфа
+2025-08-06 05:00:06,238 DEBUG root ✅ Бот успешно запущен как iCCup#7048
+2025-08-06 05:00:06,267 DEBUG aiosqlite executing <function connect.<locals>.connector at 0x0000027EC0F8D440>
+2025-08-06 05:00:06,269 DEBUG aiosqlite operation <function connect.<locals>.connector at 0x0000027EC0F8D440> completed
+2025-08-06 05:00:06,271 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F790>)
+2025-08-06 05:00:06,271 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F790>) completed
+2025-08-06 05:00:06,272 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'SELECT * FROM `bank` WHERE userID = ?', (1311574320140521473,))
+2025-08-06 05:00:06,274 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'SELECT * FROM `bank` WHERE userID = ?', (1311574320140521473,)) completed
+2025-08-06 05:00:06,275 DEBUG aiosqlite executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,275 DEBUG aiosqlite operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,276 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,276 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,277 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063F790>)
+2025-08-06 05:00:06,278 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063F790>) completed
+2025-08-06 05:00:06,280 DEBUG aiosqlite executing <function connect.<locals>.connector at 0x0000027EB1299DA0>
+2025-08-06 05:00:06,281 DEBUG aiosqlite operation <function connect.<locals>.connector at 0x0000027EB1299DA0> completed
+2025-08-06 05:00:06,282 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F1F0>)
+2025-08-06 05:00:06,283 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F1F0>) completed
+2025-08-06 05:00:06,284 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'SELECT * FROM `bank` WHERE userID = ?', (1311574320140521473,))
+2025-08-06 05:00:06,285 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'SELECT * FROM `bank` WHERE userID = ?', (1311574320140521473,)) completed
+2025-08-06 05:00:06,286 DEBUG aiosqlite executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,287 DEBUG aiosqlite operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,288 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,288 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,289 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063F1F0>)
+2025-08-06 05:00:06,290 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063F1F0>) completed
+2025-08-06 05:00:06,292 DEBUG aiosqlite executing <function connect.<locals>.connector at 0x0000027EB121B9C0>
+2025-08-06 05:00:06,293 DEBUG aiosqlite operation <function connect.<locals>.connector at 0x0000027EB121B9C0> completed
+2025-08-06 05:00:06,294 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F6A0>)
+2025-08-06 05:00:06,294 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F6A0>) completed
+2025-08-06 05:00:06,295 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'UPDATE `bank` SET `wallet` = `wallet` + ? WHERE userID = ?', (30, 1311574320140521473))
+2025-08-06 05:00:06,300 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'UPDATE `bank` SET `wallet` = `wallet` + ? WHERE userID = ?', (30, 1311574320140521473)) completed
+2025-08-06 05:00:06,301 DEBUG aiosqlite executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x0000027EC063F6A0>)
+2025-08-06 05:00:06,610 DEBUG aiosqlite operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x0000027EC063F6A0>) completed
+2025-08-06 05:00:06,611 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,612 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,613 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F6A0>)
+2025-08-06 05:00:06,613 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063F6A0>) completed
+2025-08-06 05:00:06,614 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'SELECT `wallet` FROM `bank` WHERE userID = ?', (1311574320140521473,))
+2025-08-06 05:00:06,615 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA0C40>, 'SELECT `wallet` FROM `bank` WHERE userID = ?', (1311574320140521473,)) completed
+2025-08-06 05:00:06,616 DEBUG aiosqlite executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,617 DEBUG aiosqlite operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,618 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>)
+2025-08-06 05:00:06,618 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA0C40>) completed
+2025-08-06 05:00:06,621 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063F6A0>)
+2025-08-06 05:00:06,621 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063F6A0>) completed
+2025-08-06 05:00:07,543 DEBUG root Обновлено сообщение топа 1401335731330224360
+2025-08-06 05:00:59,179 DEBUG aiosqlite executing <function connect.<locals>.connector at 0x0000027EB121B9C0>
+2025-08-06 05:00:59,211 DEBUG aiosqlite operation <function connect.<locals>.connector at 0x0000027EB121B9C0> completed
+2025-08-06 05:00:59,495 DEBUG root [2025-08-06 05:00:59] [ERROR   ] discord.client: Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\calico\Desktop\economy bot\.venv\Lib\site-packages\discord\client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\calico\Desktop\economy bot\main.py", line 58, in on_interaction
+    await client.process_application_commands(interaction)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EconomyBot' object has no attribute 'process_application_commands'
+2025-08-06 05:00:59,177 ERROR discord.client Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "C:\Users\calico\Desktop\economy bot\.venv\Lib\site-packages\discord\client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\calico\Desktop\economy bot\main.py", line 58, in on_interaction
+    await client.process_application_commands(interaction)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EconomyBot' object has no attribute 'process_application_commands'
+2025-08-06 05:00:59,496 DEBUG aiosqlite executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063FE20>)
+2025-08-06 05:00:59,497 DEBUG aiosqlite operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027EC063FE20>) completed
+2025-08-06 05:00:59,498 DEBUG aiosqlite executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA1940>, 'SELECT * FROM `inventory` WHERE userID = ?', (1311574320140521473,))
+2025-08-06 05:00:59,501 DEBUG aiosqlite operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027EC0CA1940>, 'SELECT * FROM `inventory` WHERE userID = ?', (1311574320140521473,)) completed
+2025-08-06 05:00:59,502 DEBUG aiosqlite executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA1940>)
+2025-08-06 05:00:59,503 DEBUG aiosqlite operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x0000027EC0CA1940>) completed
+2025-08-06 05:00:59,504 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA1940>)
+2025-08-06 05:00:59,504 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027EC0CA1940>) completed
+2025-08-06 05:00:59,505 DEBUG aiosqlite executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063FE20>)
+2025-08-06 05:00:59,506 DEBUG aiosqlite operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027EC063FE20>) completed
+2025-08-06 05:01:00,396 DEBUG root ✅ Синхронизировано 21 команд
+2025-08-06 05:01:07,551 DEBUG root Попытка обновить/создать сообщение топа в канале тест-конфа
+2025-08-06 05:01:08,710 DEBUG root Обновлено сообщение топа 1401335731330224360
+2025-08-06 05:02:08,712 DEBUG root Попытка обновить/создать сообщение топа в канале тест-конфа
+2025-08-06 05:02:09,863 DEBUG root Обновлено сообщение топа 1401335731330224360
