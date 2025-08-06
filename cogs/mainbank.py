@@ -31,7 +31,7 @@ class ShopButton(Button):
             parts = item["name"].split(" ", 1)
             emoji = parts[0] if len(parts) > 1 else ""
             name = parts[1].upper() if len(parts) > 1 else item["name"].upper()
-            desc += f"{emoji} {name} -- {item['cost']} <:gold:1396897616729735299>\n{item['info']}\nID: {item['id']}\n"
+            desc += f"{emoji} {name} -- {item['cost']} <:gold:1396929958965940286>\n{item['info']}\nID: {item['id']}\n"
         embed.description = desc
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
@@ -193,7 +193,7 @@ class MainBank(commands.Cog):
             print(f"[LOG] withdraw_slash: withdrawing all {bank_amt}")
             await self.bank.update_acc(user, +1 * bank_amt)
             await self.bank.update_acc(user, -1 * bank_amt, "bank")
-            await interaction.response.send_message(f"Вы сняли {bank_amt} <:gold:1396897616729735299> из банка.")
+            await interaction.response.send_message(f"Вы сняли {bank_amt} <:gold:1396929958965940286> из банка.")
             return
         try:
             amount_int = int(amount)
@@ -209,7 +209,7 @@ class MainBank(commands.Cog):
         print(f"[LOG] withdraw_slash: withdrawing {amount_int}")
         await self.bank.update_acc(user, +amount_int)
         await self.bank.update_acc(user, -amount_int, "bank")
-        await interaction.response.send_message(f"Вы сняли {amount_int} <:gold:1396897616729735299> из банка.")
+        await interaction.response.send_message(f"Вы сняли {amount_int} <:gold:1396929958965940286> из банка.")
 
     @app_commands.command(name="пополнить", description="Положить деньги в банк")
     @app_commands.describe(amount="Сумма для пополнения (число или 'все')")
@@ -225,7 +225,7 @@ class MainBank(commands.Cog):
             print(f"[LOG] deposit_slash: depositing all {wallet_amt}")
             await self.bank.update_acc(user, -wallet_amt)
             await self.bank.update_acc(user, +wallet_amt, "bank")
-            await interaction.response.send_message(f"Вы пополнили банк на {wallet_amt} <:gold:1396897616729735299>.")
+            await interaction.response.send_message(f"Вы пополнили банк на {wallet_amt} <:gold:1396929958965940286>.")
             return
         try:
             amount_int = int(amount)
@@ -241,7 +241,7 @@ class MainBank(commands.Cog):
         print(f"[LOG] deposit_slash: depositing {amount_int}")
         await self.bank.update_acc(user, -amount_int)
         await self.bank.update_acc(user, +amount_int, "bank")
-        await interaction.response.send_message(f"Вы пополнили банк на {amount_int} <:gold:1396897616729735299>.")
+        await interaction.response.send_message(f"Вы пополнили банк на {amount_int} <:gold:1396929958965940286>.")
 
     @app_commands.command(name="перевести", description="Перевести деньги другому участнику")
     @app_commands.describe(member="Кому перевести", amount="Сумма для перевода")
@@ -262,7 +262,7 @@ class MainBank(commands.Cog):
             await interaction.response.send_message("Введите корректную сумму!", ephemeral=True)
             return
         if amount > wallet_amt:
-            await interaction.response.send_message("У вас недостаточно <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("У вас недостаточно <:gold:1396929958965940286>", ephemeral=True)
             return
         print(f"[LOG] transfer_slash: transferring {amount} from user={user.id} to member={member.id}")
         await self.bank.update_acc(user, -amount)
@@ -286,22 +286,22 @@ class MainBank(commands.Cog):
             member_amt = member[1]
             mention = user_obj.mention if user_obj else f"<@{member[0]}>"
             if index == 1:
-                msg1 = f"**🥇 {mention} -- {member_amt} <:gold:1396897616729735299>**"
+                msg1 = f"**🥇 {mention} -- {member_amt} <:gold:1396929958965940286>**"
                 data.append(msg1)
             elif index == 2:
-                msg2 = f"**🥈 {mention} -- {member_amt} <:gold:1396897616729735299>**"
+                msg2 = f"**🥈 {mention} -- {member_amt} <:gold:1396929958965940286>**"
                 data.append(msg2)
             elif index == 3:
-                msg3 = f"**🥉 {mention} -- {member_amt} <:gold:1396897616729735299>**\n"
+                msg3 = f"**🥉 {mention} -- {member_amt} <:gold:1396929958965940286>**\n"
                 data.append(msg3)
             else:
-                members = f"**{index} {mention} -- {member_amt} <:gold:1396897616729735299>**"
+                members = f"**{index} {mention} -- {member_amt} <:gold:1396929958965940286>**"
                 data.append(members)
             index += 1
         msg = "\n".join(data)
         em = discord.Embed(
-            title=f"Топ {index - 1} самых богатых пользователей (в <:gold:1396897616729735299>)",
-            description=f"**Всего денег на сервере:** {total_money:,} <:gold:1396897616729735299>\n\nРейтинг по общей сумме (кошелёк + банк) в <:gold:1396897616729735299> всех пользователей\n\n{msg}",
+            title=f"Топ {index - 1} самых богатых пользователей (в <:gold:1396929958965940286>)",
+            description=f"**Всего денег на сервере:** {total_money:,} <:gold:1396929958965940286>\n\nРейтинг по общей сумме (кошелёк + банк) в <:gold:1396929958965940286> всех пользователей\n\n{msg}",
             color=discord.Color(0x00ff00),
             timestamp=datetime.utcnow()
         )
