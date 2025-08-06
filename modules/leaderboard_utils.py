@@ -42,7 +42,7 @@ async def create_balance_leaderboard_embed(users_data, client):
             balance_str = format_balance(total)
             description.append(
                 f"{medal} **#{i}** · {member.mention}\n"
-                f"┗━ {balance_str} <:gold:1396897616729735299>\n"
+                f"┗━ {balance_str} <:gold:1396929958965940286>\n"
             )
     
     if description:
@@ -53,7 +53,7 @@ async def create_balance_leaderboard_embed(users_data, client):
     # Добавляем время обновления
     embed.set_footer(
         text=f"Обновлено {moscow_time.strftime('%H:%M:%S')}",
-        icon_url="https://cdn.discordapp.com/emojis/1396897616729735299.png"
+        icon_url="https://cdn.discordapp.com/emojis/1396929958965940286.png"
     )
     
     return embed
