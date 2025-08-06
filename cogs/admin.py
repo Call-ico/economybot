@@ -91,7 +91,7 @@ class Admin(commands.Cog):
         balance = users[1] if mode == "кошелёк" else users[2]
         buf = self.create_admin_receipt("Добавлено", member, amount, ctx.author, balance=balance)
         file = discord.File(buf, filename="admin_receipt.png")
-        await ctx.reply(f"Вы добавили {amount:,} <:gold:1396897616729735299> в {mode} пользователя {member.mention}", file=file, mention_author=False)
+        await ctx.reply(f"Вы добавили {amount:,} <:gold:1396929958965940286> в {mode} пользователя {member.mention}", file=file, mention_author=False)
         
         # Лог админской операции в форум-канал
         forum_channel_id = 1396619305763733686
@@ -102,9 +102,9 @@ class Admin(commands.Cog):
 **АДМИНСКАЯ ОПЕРАЦИЯ: ДОБАВЛЕНИЕ ДЕНЕГ**
 👤 Администратор: {ctx.author.mention}
 👤 Получатель: {member.mention}
-💰 Сумма: {amount:,} <:gold:1396897616729735299>
+💰 Сумма: {amount:,} <:gold:1396929958965940286>
 🏦 Куда: {mode}
-💳 Баланс после операции: {balance:,} <:gold:1396897616729735299>
+💳 Баланс после операции: {balance:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
             """
             try:
@@ -131,7 +131,7 @@ class Admin(commands.Cog):
         user_amt = users[2 if mode == "банк" else 1]
         if user_amt < amount:
             return await ctx.reply(
-                f"Можно убрать только {user_amt:,} <:gold:1396897616729735299> из {mode} пользователя {member.mention}"
+                f"Можно убрать только {user_amt:,} <:gold:1396929958965940286> из {mode} пользователя {member.mention}"
             )
 
         await self.bank.update_acc(member, -amount, "wallet" if mode == "кошелёк" else "bank")
@@ -139,7 +139,7 @@ class Admin(commands.Cog):
         balance = users[1] if mode == "кошелёк" else users[2]
         buf = self.create_admin_receipt("Снято", member, amount, ctx.author, balance=balance)
         file = discord.File(buf, filename="admin_receipt.png")
-        await ctx.reply(f"Вы убрали {amount:,} <:gold:1396897616729735299> из {mode} пользователя {member.mention}", file=file, mention_author=False)
+        await ctx.reply(f"Вы убрали {amount:,} <:gold:1396929958965940286> из {mode} пользователя {member.mention}", file=file, mention_author=False)
         
         # Лог админской операции в форум-канал
         forum_channel_id = 1396619305763733686
@@ -150,9 +150,9 @@ class Admin(commands.Cog):
 **АДМИНСКАЯ ОПЕРАЦИЯ: СНЯТИЕ ДЕНЕГ**
 👤 Администратор: {ctx.author.mention}
 👤 Пользователь: {member.mention}
-💰 Сумма: {amount:,} <:gold:1396897616729735299>
+💰 Сумма: {amount:,} <:gold:1396929958965940286>
 🏦 Откуда: {mode}
-💳 Баланс после операции: {balance:,} <:gold:1396897616729735299>
+💳 Баланс после операции: {balance:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
             """
             try:
