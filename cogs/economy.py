@@ -65,7 +65,7 @@ class Economy(commands.Cog):
         # Выдаём бонус
         await self.bank.open_acc(user)
         await self.bank.update_acc(user, 30)
-        await interaction.response.send_message(f"Вам начислено 30 <:gold:1396897616729735299>!")
+        await interaction.response.send_message(f"Вам начислено 30 <:gold:1396929958965940286>!")
         # Сохраняем время
         timestamps[user_id] = now
         data["bonus_timestamps"] = timestamps
