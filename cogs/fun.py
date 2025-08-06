@@ -82,7 +82,7 @@ class Fun(commands.Cog):
         if stop_index in gold_map:
             amount = gold_map[stop_index]
             await self.client.db.bank.update_acc(user, +amount)
-            await interaction.followup.send(f"Поздравляем! Вам выпало **{prize}** и зачислено {amount} <:gold:1396897616729735299>!", file=file)
+            await interaction.followup.send(f"Поздравляем! Вам выпало **{prize}** и зачислено {amount} <:gold:1396929958965940286>!", file=file)
         else:
             prize_map = {
                 0: "<:proakk7:1397688074343026708> про акк 2 дня",
@@ -137,11 +137,11 @@ class Fun(commands.Cog):
         await self.bank.open_acc(user)
         bet_on = "орел" if "о" in bet_on.lower() else "решка"
         if not 25 <= amount <= 150:
-            await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396929958965940286>", ephemeral=True)
             return
         users = await self.bank.get_acc(user)
         if users[1] < amount:
-            await interaction.response.send_message("У вас недостаточно <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("У вас недостаточно <:gold:1396929958965940286>", ephemeral=True)
             return
         import asyncio
         wait_msg = await interaction.response.send_message("Крутим монетку... 🪙", ephemeral=False)
@@ -152,8 +152,8 @@ class Fun(commands.Cog):
             await self.bank.update_acc(user, -amount)
             users = await self.bank.get_acc(user)
             embed = discord.Embed(title="Монетка: Проигрыш 😢", color=0xE74C3C)
-            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396897616729735299>")
-            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396929958965940286>")
+            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
             embed.set_footer(text="Удачи в следующий раз!")
             await interaction.edit_original_response(content=None, embed=embed)
             return
@@ -161,9 +161,9 @@ class Fun(commands.Cog):
         await self.bank.update_acc(user, +reward)
         users = await self.bank.get_acc(user)
         embed = discord.Embed(title="Монетка: Победа 🎉", color=0x2ECC71)
-        embed.add_field(name="Ставка", value=f"{amount} <:gold:1396897616729735299>")
-        embed.add_field(name="Выигрыш", value=f"{amount + reward} <:gold:1396897616729735299>")
-        embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+        embed.add_field(name="Ставка", value=f"{amount} <:gold:1396929958965940286>")
+        embed.add_field(name="Выигрыш", value=f"{amount + reward} <:gold:1396929958965940286>")
+        embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
         embed.set_footer(text="Поздравляем!")
         await interaction.edit_original_response(content=None, embed=embed)
 
@@ -175,11 +175,11 @@ class Fun(commands.Cog):
             return
         await self.bank.open_acc(user)
         if not 25 <= amount <= 150:
-            await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396929958965940286>", ephemeral=True)
             return
         users = await self.bank.get_acc(user)
         if users[1] < amount:
-            await interaction.response.send_message("У вас недостаточно <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("У вас недостаточно <:gold:1396929958965940286>", ephemeral=True)
             return
         import asyncio
         import random as pyrand
@@ -201,16 +201,16 @@ class Fun(commands.Cog):
             await self.bank.update_acc(user, +reward)
             users = await self.bank.get_acc(user)
             embed = discord.Embed(title="Слоты: Победа 🎉", description=slot_line, color=0x2ECC71)
-            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396897616729735299>")
-            embed.add_field(name="Выигрыш", value=f"{amount + reward} <:gold:1396897616729735299>")
-            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396929958965940286>")
+            embed.add_field(name="Выигрыш", value=f"{amount + reward} <:gold:1396929958965940286>")
+            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
             embed.set_footer(text="Поздравляем!")
         else:
             await self.bank.update_acc(user, -amount)
             users = await self.bank.get_acc(user)
             embed = discord.Embed(title="Слоты: Проигрыш 😢", description=slot_line, color=0xE74C3C)
-            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396897616729735299>")
-            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396929958965940286>")
+            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
             embed.set_footer(text="Попробуйте ещё раз!")
         await interaction.edit_original_response(content=None, embed=embed)
 
@@ -222,11 +222,11 @@ class Fun(commands.Cog):
             return
         await self.bank.open_acc(user)
         if not 25 <= amount <= 150:
-            await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396929958965940286>", ephemeral=True)
             return
         users = await self.bank.get_acc(user)
         if users[1] < amount:
-            await interaction.response.send_message("У вас недостаточно <:gold:1396897616729735299>", ephemeral=True)
+            await interaction.response.send_message("У вас недостаточно <:gold:1396929958965940286>", ephemeral=True)
             return
         import asyncio
         wait_msg = await interaction.response.send_message("Бросаем кости... 🎲", ephemeral=False)
@@ -239,16 +239,16 @@ class Fun(commands.Cog):
             await self.bank.update_acc(user, +reward)
             users = await self.bank.get_acc(user)
             embed = discord.Embed(title="Кости: Победа 🎉", description=f"Выпало: {dice}", color=0x2ECC71)
-            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396897616729735299>")
-            embed.add_field(name="Выигрыш", value=f"{reward} <:gold:1396897616729735299>")
-            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396929958965940286>")
+            embed.add_field(name="Выигрыш", value=f"{reward} <:gold:1396929958965940286>")
+            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
             embed.set_footer(text="Поздравляем!")
         else:
             await self.bank.update_acc(user, -amount)
             users = await self.bank.get_acc(user)
             embed = discord.Embed(title="Кости: Проигрыш 😢", description=f"Выпало: {dice}", color=0xE74C3C)
-            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396897616729735299>")
-            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+            embed.add_field(name="Ставка", value=f"{amount} <:gold:1396929958965940286>")
+            embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
             embed.set_footer(text="Попробуйте ещё раз!")
         await interaction.edit_original_response(content=None, embed=embed)
 
@@ -292,8 +292,8 @@ class BlackjackView(View):
         embed = discord.Embed(title="Блэкджек /21 🂡", color=color)
         embed.add_field(name="Ваши карты", value=f"{self.hand_str(self.player_hand)}\nСумма: {self.hand_value(self.player_hand)}", inline=False)
         embed.add_field(name="Карты дилера", value=f"{self.hand_str([self.dealer_hand[0], '❓'])}", inline=False)
-        embed.add_field(name="Ставка", value=f"{self.bet} <:gold:1396897616729735299>")
-        embed.add_field(name="Баланс", value=f"{self.bank} <:gold:1396897616729735299>")
+        embed.add_field(name="Ставка", value=f"{self.bet} <:gold:1396929958965940286>")
+        embed.add_field(name="Баланс", value=f"{self.bank} <:gold:1396929958965940286>")
         if result:
             embed.add_field(name="Результат", value=result, inline=False)
         await self.message.edit(embed=embed, view=self if not self.finished else None)
@@ -309,8 +309,8 @@ class BlackjackView(View):
             await interaction.response.edit_message(embed=discord.Embed(title="Блэкджек /21 🂡", color=0xE74C3C)
                 .add_field(name="Ваши карты", value=f"{self.hand_str(self.player_hand)}\nСумма: {self.hand_value(self.player_hand)}", inline=False)
                 .add_field(name="Карты дилера", value=f"{self.hand_str(self.dealer_hand)}", inline=False)
-                .add_field(name="Ставка", value=f"{self.bet} <:gold:1396897616729735299>")
-                .add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+                .add_field(name="Ставка", value=f"{self.bet} <:gold:1396929958965940286>")
+                .add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
                 .add_field(name="Результат", value="Перебор! Вы проиграли 😢", inline=False), view=None)
         else:
             await self.update_embed()
@@ -327,7 +327,7 @@ class BlackjackView(View):
         if dealer_val > 21 or player_val > dealer_val:
             await self.ctx.bot.bank.update_acc(self.ctx.author, int(self.bet * 1.5))
             users = await self.ctx.bot.bank.get_acc(self.ctx.author)
-            result = f"Вы выиграли! 🎉\nВыплата: {int(self.bet * 1.5)} <:gold:1396897616729735299>"
+            result = f"Вы выиграли! 🎉\nВыплата: {int(self.bet * 1.5)} <:gold:1396929958965940286>"
             color = 0x2ECC71
         elif player_val == dealer_val:
             result = "Ничья! Ваши деньги возвращены."
@@ -335,13 +335,13 @@ class BlackjackView(View):
         else:
             await self.ctx.bot.bank.update_acc(self.ctx.author, -self.bet)
             users = await self.ctx.bot.bank.get_acc(self.ctx.author)
-            result = f"Вы проиграли! 😢\nПотеря: {self.bet} <:gold:1396897616729735299>"
+            result = f"Вы проиграли! 😢\nПотеря: {self.bet} <:gold:1396929958965940286>"
             color = 0xE74C3C
         embed = discord.Embed(title="Блэкджек /21 🂡", color=color)
         embed.add_field(name="Ваши карты", value=f"{self.hand_str(self.player_hand)}\nСумма: {player_val}", inline=False)
         embed.add_field(name="Карты дилера", value=f"{self.hand_str(self.dealer_hand)}\nСумма: {dealer_val}", inline=False)
-        embed.add_field(name="Ставка", value=f"{self.bet} <:gold:1396897616729735299>")
-        embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+        embed.add_field(name="Ставка", value=f"{self.bet} <:gold:1396929958965940286>")
+        embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
         embed.add_field(name="Результат", value=result, inline=False)
         await interaction.response.edit_message(embed=embed, view=None)
 
@@ -352,10 +352,10 @@ class BlackjackView(View):
             return
         await self.bank.open_acc(user)
         if not 25 <= ставка <= 150:
-            return await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396897616729735299>", ephemeral=True)
+            return await interaction.response.send_message("Ставка может быть только от 25 до 150 <:gold:1396929958965940286>", ephemeral=True)
         users = await self.bank.get_acc(user)
         if users[1] < ставка:
-            return await interaction.response.send_message("У вас недостаточно <:gold:1396897616729735299>", ephemeral=True)
+            return await interaction.response.send_message("У вас недостаточно <:gold:1396929958965940286>", ephemeral=True)
         # Колода
         suits = ["♠", "♥", "♦", "♣"]
         ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
@@ -367,8 +367,8 @@ class BlackjackView(View):
         embed = discord.Embed(title="Блэкджек /21 🂡", color=0x3498DB)
         embed.add_field(name="Ваши карты", value=f"{BlackjackView.hand_str(player_hand)}\nСумма: {BlackjackView.hand_value(player_hand)}", inline=False)
         embed.add_field(name="Карты дилера", value=f"{dealer_hand[0]} ❓", inline=False)
-        embed.add_field(name="Ставка", value=f"{ставка} <:gold:1396897616729735299>")
-        embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396897616729735299>")
+        embed.add_field(name="Ставка", value=f"{ставка} <:gold:1396929958965940286>")
+        embed.add_field(name="Баланс", value=f"{users[1]} <:gold:1396929958965940286>")
         view.message = await interaction.response.send_message(embed=embed, view=view)
 
 
