@@ -45,7 +45,7 @@ class PurchaseActionView(discord.ui.View):
             return
         await self.inv.update_acc(user, -1, self.item_name)
         await self.bank.update_acc(user, +self.item_cost)
-        await self.thread.send(f"❌ Покупка **{self.item_name}** у {user.mention} отклонена {interaction.user.mention} ({interaction.user})\n💸 Возврат: {self.item_cost:,} <:gold:1396897616729735299>\n⏰ <t:{int(datetime.utcnow().timestamp())}:f>")
+        await self.thread.send(f"❌ Покупка **{self.item_name}** у {user.mention} отклонена {interaction.user.mention} ({interaction.user})\n💸 Возврат: {self.item_cost:,} <:gold:1396929958965940286>\n⏰ <t:{int(datetime.utcnow().timestamp())}:f>")
         await interaction.response.send_message(f"Покупка отклонена, предмет удалён и средства возвращены.", ephemeral=True)
 
 
@@ -157,7 +157,7 @@ class Inventory(commands.Cog):
             return
         users = await self.bank.get_acc(user)
         if users[1] < item["cost"]:
-            await interaction.response.send_message(f"У вас недостаточно <:gold:1396897616729735299> для покупки {item['name']}", ephemeral=True)
+            await interaction.response.send_message(f"У вас недостаточно <:gold:1396929958965940286> для покупки {item['name']}", ephemeral=True)
             return
         try:
             await self.inv.update_acc(user, +1, item["name"])
@@ -178,8 +178,8 @@ class Inventory(commands.Cog):
 **ПОКУПКА ПРЕДМЕТА**
 👤 Покупатель: {user.mention}
 🛒 Предмет: **{item['name']}**
-💰 Стоимость: {item['cost']:,} <:gold:1396897616729735299>
-💳 Баланс после покупки: {users[1]:,} <:gold:1396897616729735299>
+💰 Стоимость: {item['cost']:,} <:gold:1396929958965940286>
+💳 Баланс после покупки: {users[1]:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
             """
             try:
@@ -194,8 +194,8 @@ class Inventory(commands.Cog):
 **ПОКУПКА ПРЕДМЕТА**
 👤 Покупатель: {user.mention}
 🛒 Предмет: **{item['name']}**
-💰 Стоимость: {item['cost']:,} <:gold:1396897616729735299>
-💳 Баланс после покупки: {users[1]:,} <:gold:1396897616729735299>
+💰 Стоимость: {item['cost']:,} <:gold:1396929958965940286>
+💳 Баланс после покупки: {users[1]:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
                 """
                 await forum_channel.send(log_content)
@@ -263,7 +263,7 @@ class Inventory(commands.Cog):
         except Exception as e:
             await interaction.response.send_message(f"Ошибка при обновлении баланса: {e}", ephemeral=True)
             return
-        await interaction.response.send_message(f"Вы продали {item['name']} за {cost:,} <:gold:1396897616729735299>")
+        await interaction.response.send_message(f"Вы продали {item['name']} за {cost:,} <:gold:1396929958965940286>")
         # Дублирование лога продажи в форум-канал
         forum_channel_id = 1396619305763733686
         forum_channel = interaction.guild.get_channel(forum_channel_id)
@@ -273,7 +273,7 @@ class Inventory(commands.Cog):
 **ПРОДАЖА ПРЕДМЕТА**
 👤 Продавец: {user.mention}
 🛒 Предмет: **{item['name']}**
-💰 Получено: {cost:,} <:gold:1396897616729735299>
+💰 Получено: {cost:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
             """
             try:
@@ -335,7 +335,7 @@ class Inventory(commands.Cog):
             return await ctx.reply("Ошибка: стоимость предмета некорректна.", mention_author=False)
         users = await self.bank.get_acc(user)
         if users[1] < item["cost"]:
-            return await ctx.reply(f"У вас недостаточно <:gold:1396897616729735299> для покупки {item['name']}", mention_author=False)
+            return await ctx.reply(f"У вас недостаточно <:gold:1396929958965940286> для покупки {item['name']}", mention_author=False)
         try:
             await self.inv.update_acc(user, +1, item["name"])
             await self.bank.update_acc(user, -item["cost"])
@@ -354,8 +354,8 @@ class Inventory(commands.Cog):
 **ПОКУПКА ПРЕДМЕТА**
 👤 Покупатель: {user.mention}
 🛒 Предмет: **{item['name']}**
-💰 Стоимость: {item['cost']:,} <:gold:1396897616729735299>
-💳 Баланс после покупки: {users[1]:,} <:gold:1396897616729735299>
+💰 Стоимость: {item['cost']:,} <:gold:1396929958965940286>
+💳 Баланс после покупки: {users[1]:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
             """
             try:
@@ -370,8 +370,8 @@ class Inventory(commands.Cog):
 **ПОКУПКА ПРЕДМЕТА**
 👤 Покупатель: {user.mention}
 🛒 Предмет: **{item['name']}**
-💰 Стоимость: {item['cost']:,} <:gold:1396897616729735299>
-💳 Баланс после покупки: {users[1]:,} <:gold:1396897616729735299>
+💰 Стоимость: {item['cost']:,} <:gold:1396929958965940286>
+💳 Баланс после покупки: {users[1]:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
                 """
                 await forum_channel.send(log_content)
@@ -435,7 +435,7 @@ class Inventory(commands.Cog):
 **ПРОДАЖА ПРЕДМЕТА**
 👤 Продавец: {user.mention}
 🛒 Предмет: **{item['name']}**
-💰 Получено: {cost:,} <:gold:1396897616729735299>
+💰 Получено: {cost:,} <:gold:1396929958965940286>
 ⏰ Время: <t:{int(datetime.utcnow().timestamp())}:f>
             """
             try:
@@ -443,7 +443,7 @@ class Inventory(commands.Cog):
             except Exception as e:
                 print(f"Ошибка создания лога продажи: {e}")
         
-        return await ctx.reply(f"Вы продали {item['name']} за {cost:,} <:gold:1396897616729735299>", mention_author=False)
+        return await ctx.reply(f"Вы продали {item['name']} за {cost:,} <:gold:1396929958965940286>", mention_author=False)
 
     @commands.command(usage="<@пользователь> <id_предмета>")
     @commands.has_permissions(administrator=True)
