@@ -30,7 +30,7 @@ class DailyBonus(commands.Cog):
                     await self.bot.db.bank.update_acc(member, BONUS_AMOUNT)
                     # Не отправлять личные сообщения
                     # try:
-                    #     await member.send(f"Вам начислено {BONUS_AMOUNT} <:gold:1396897616729735299> за уникальную роль!")
+                    #     await member.send(f"Вам начислено {BONUS_AMOUNT} <:gold:1396929958965940286> за уникальную роль!")
                     # except Exception:
                     #     pass  # Не удалось отправить ЛС
 
